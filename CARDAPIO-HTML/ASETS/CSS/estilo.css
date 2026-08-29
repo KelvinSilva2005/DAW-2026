@@ -1,9 +1,9 @@
 :root{
   --text:#1c1917
 }
-/**
+/******
 *Generics
-***/
+*******/
 body {
   border: 3px solid white;
   font-family: "Inter", sans-serif;
@@ -25,9 +25,9 @@ p {
   color: black;
 }
 
-/*****
+/***********
 Cabeçalho
-*****/
+***********/
 header .brand {
   display: flex;
   align-items: center; 
