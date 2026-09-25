@@ -1,37 +1,27 @@
 const categoryLinks = document.querySelectorAll('nav a');
-
-console.log('Category Links:');
-console.log(categoryLinks);
-
-/*function defineComportamento( Link ) {
-    // Bloco de código
-    link.text = 'Olá Mundo';
-    link.cor = 'red';
-    link.barulho = 'click';
-}*/
+const selectedCategory = document.getElementById('selected-category');
 
 categoryLinks.forEach(function(link) {
     link.addEventListener('click', function(event) {
-        event.preventDefault(); 
-
-        // Desativa a tentativa de navegação do link
         event.preventDefault();
 
-        // Pega o nome da categoria clicada
+        //pega o nome da categoria clicada
         const categoryName = link.textContent;
 
-        // Atualiza o texto da categoria selecionada
+        //atualiza o texto do span com o nome da categoria
         selectedCategory.textContent = categoryName;
 
-        alert('Categoria clicada:', categoryName);
-
-        // Remover a claas "active"
-        categoryLinks.forEach(function(CategoryLink) {
-            CategoryLink.classList.remove('active');
+        //remover a class active
+        categoryLinks.forEach(function(categoryLink) {  
+        categoryLink.classList.remove('active');
         });
 
-        // Adicionar a classe "active" ao link clicado
+
+        //adiciona a class active
         link.classList.add('active');
+
         
-    });
+
+    
+});
 });

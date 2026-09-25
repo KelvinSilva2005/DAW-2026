@@ -8,9 +8,9 @@
     --border: #E7E5E4;
 }
 
-/*****
+/***********
 * GENERICS 
-*****/
+***********/
 * {
     margin: 0;
     padding: 0;
@@ -34,9 +34,9 @@ main {
 }
 
 
-/*****
+/***********
 * CABECHALHO
-*****/
+***********/
 body > header {
     background-color: #ffffff;
 
@@ -92,9 +92,9 @@ header .cart-button img {
     height: 1.25rem;
 }
 
-/*****
+/***********
 * NAVEGAÇÃO
-*****/
+***********/
 nav {
     background-color: #fff;
     border-bottom: 1px solid var(--border);
@@ -138,9 +138,9 @@ nav ul a:not(a.active):hover {
     color: var(--primary);
 }
 
-/*****
+/***********
 * MAIN
-*****/
+***********/
 main {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -267,9 +267,9 @@ main aside .cart-empty p:last-of-type {
 
 
 
-/*****
+/***********
 * FOOTER
-*****/
+***********/
 footer {
     background-color: var(--text-muted);
     color: var(--bg);
@@ -291,9 +291,9 @@ footer .container {
 
 
 
-/*****
+/***********
 * RESPONSIVIDADE
-*****/
+***********/
 
 /*Celulares Maiores >= 480px */
 @media (min-width: 30rem) {
