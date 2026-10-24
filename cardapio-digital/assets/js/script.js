@@ -1,27 +1,26 @@
 const categoryLinks = document.querySelectorAll('nav a');
 const selectedCategory = document.getElementById('selected-category');
 
-categoryLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
+categoryLinks.forEach(function (link) {
+  link.addEventListener('click', function (evento) {
+// Desativa a navegação padrão do link    
+    evento.preventDefault();
 
-        //pega o nome da categoria clicada
-        const categoryName = link.textContent;
+// Pega o nome da categoria do link clicado
+    const categoryName = link.textContent;
 
-        //atualiza o texto do span com o nome da categoria
-        selectedCategory.textContent = categoryName;
-
-        //remover a class active
-        categoryLinks.forEach(function(categoryLink) {  
-        categoryLink.classList.remove('active');
-        });
-
-
-        //adiciona a class active
-        link.classList.add('active');
-
-        
-
+// Atualiza o texto do elemento com o id "selected-category" para mostrar a categoria clicada
+    selectedCategory.textContent = categoryName;
     
-});
+alert('Categoria clicada: ' + categoryName);
+
+//remover a class "active" de todos os links
+      categoryLinks.forEach(function (categoryLinks) {
+        categoryLinks.classList.remove('active');
+      });
+
+//adicionar a class "active" ao link clicado
+      link.classList.add('active');
+
+    });
 });
