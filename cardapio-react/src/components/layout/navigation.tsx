@@ -1,25 +1,35 @@
-import type { Category } from "./data/categorias"
+import type { Category } from "../../data/categories"
 
 type NavigationBarProps = {
     categories: Category[]
-    activeCategory:string
-    ons
+    activeCategory?: string
+    onSelectCategory?: (alias: string) => void
 }
 export function NavigationBar({
-    categories,
-    activeCategory
-} : NavigationBarProps) {
-return (
-    <nav>
-    <ul className="container">
-        {categories.map((category)=>(
-            <li>
-        <button type="button"
-        className={category.alias == activeCategory ? "active" : ''}
-         >{category.label}</button>
-             </li>
-        ))}
-    </ul>
-    </nav>
-  )
+    categories, 
+    activeCategory,
+    onSelectCategory
+}: NavigationBarProps) {
+
+    return (
+
+        <nav>
+            <ul className="container">
+                { categories.map((category) => (
+                    <li>
+                        <button
+                         type="button"
+                         className={category.alias === activeCategory ? "active" : ""}
+                         onClick={() => onSelectCategory?.(category.alias)}
+                        >
+                            {category.label}
+                        </button>
+                    </li>
+
+                )) }
+            </ul>
+        </nav>
+
+
+    )
 }
